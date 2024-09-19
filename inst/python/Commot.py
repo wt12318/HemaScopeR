@@ -28,7 +28,7 @@ def run_Commot(
     dis_thr = 500,
     n_permutations = 1000
 ):
-    adata = sc.read_visium(st_data_path)
+    adata = sc.read_visium(st_data_path,library_id = 'Hema_ST')
     adata.var_names_make_unique()
     adata.raw = adata
     sc.pp.normalize_total(adata, inplace=True)
